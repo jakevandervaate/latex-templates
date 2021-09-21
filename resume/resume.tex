@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{titling}
+\title{Resume}
+\author{Your Name}
+\date{The Date}
+
+\newcommand{\email}{your.email@email.com}
+\newcommand{\phone}{+1(111)111-1111}
+\newcommand{\linkedin}{your-linkedin-slug} %slug (the last part) for url
+\newcommand{\website}{yourwebsiteontheweb.com}
+
+\input{packages}
+\input{commands}
+
+\hypersetup{
+colorlinks=true, %"false" disables link colors
+linkcolor=black, %links elsewhere in document
+filecolor=black, %color for links to files
+urlcolor=black, %color for hyperlinked urls 
+pdftitle={\thetitle}, %Populates "title" metadata field
+pdfauthor={\theauthor}, %Populates "author" metadata field
+pdfsubject={Resume/CV for \theauthor}, %Populates "subject" metadata
+pdfkeywords={resume, cv}, %Populates PDF keyword metadata, separate with commans
+}
+
+
+
+
+
+\begin{document}
+\NumTabs{10}
+\sffamily %Set san serif font for body text
+\maketitle
+
+
+\section{Education}
+
+\entry
+{Name of Degree}{Start Date -- End Date}
+{Name of University}{City, ST}
+{\nothing}
+
+\entry
+{Name of Degree}{Start Date -- End Date}
+{Name of University}{City, ST}
+{
+\begin{itemize}
+\item You can put courses here if you want
+\item Another course
+\item Use "\textbackslash nothing" command (seen above) to leave this field blank
+\end{itemize}
+}
+
+
+
+
+\section{Experience}
+
+\entry
+{Name of Role}{Start Date -- End Date}
+{Name of Company}{City, ST}
+{
+\begin{itemize}
+\item An amazing thing you did
+\item Another amazing thing you did
+\item More amazing stuff
+\end{itemize}
+}
+
+
+\entry
+{Name of Role}{Start Date -- End Date}
+{Name of Company}{City, ST}
+{
+\begin{itemize}
+\item An amazing thing you did
+\item Another amazing thing you did
+\item More amazing stuff
+\end{itemize}
+}
+
+
+
+\section{Projects}
+
+\entry
+{Name of Project}{Start Date -- End Date}
+{Describe project}{\href{link_to_project.com}{website link or City, ST}}
+{
+Describe the project in a paragraph if you'd like.
+Say some nice things about it.
+Maybe highlight some of the tools you used below.
+\textbf{Tools Used:} Software, Hardware, other tools
+}
+
+
+\section{Skills}
+
+\begin{tabular}{ll}
+\textbf{Programming Languages} & Example, example, example, example \\
+\textbf{Markup Languages} & Example, example, example, example \\
+\textbf{Graphic Design} & Example, example, example 
+\end{tabular}
+
+
+\end{document}
