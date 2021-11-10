@@ -14,6 +14,8 @@ The resume is made up of the three following files:
   This file shouldn't need to be edited unless you want to change the document style.
 * **packages.tex**- This file contains all the packages I use in this template.
 
+The main resume file needs the commands.tex and packages.tex file in order to work, so you should copy the entire folder when you want to make another copy of this resume (this is a good idea with any LaTeX document).
+
 ## pdf2png.sh
 
 This shell script is what I used to generate the document screenshots for this README.
