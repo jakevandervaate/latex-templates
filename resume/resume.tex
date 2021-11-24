@@ -4,13 +4,13 @@
 \author{Your Name}
 \date{The Date}
 
+\input{packages}
+\input{commands}
+
 \newcommand{\email}{your.email@email.com}
 \newcommand{\phone}{+1(111)111-1111}
 \newcommand{\linkedin}{your-linkedin-slug} %slug (the last part) for url
 \newcommand{\website}{yourwebsiteontheweb.com}
-
-\input{packages}
-\input{commands}
 
 \hypersetup{
 colorlinks=true, %"false" disables link colors
@@ -24,11 +24,8 @@ pdfkeywords={resume, cv}, %Populates PDF keyword metadata, separate with commans
 }
 
 
-
-
-
 \begin{document}
-\NumTabs{10}
+\NumTabs{10} %Allow use of the \tab command for alignment
 \sffamily %Set san serif font for body text
 \maketitle
 
@@ -52,8 +49,6 @@ pdfkeywords={resume, cv}, %Populates PDF keyword metadata, separate with commans
 }
 
 
-
-
 \section{Experience}
 
 \entry
@@ -67,7 +62,6 @@ pdfkeywords={resume, cv}, %Populates PDF keyword metadata, separate with commans
 \end{itemize}
 }
 
-
 \entry
 {Name of Role}{Start Date -- End Date}
 {Name of Company}{City, ST}
@@ -78,7 +72,6 @@ pdfkeywords={resume, cv}, %Populates PDF keyword metadata, separate with commans
 \item More amazing stuff
 \end{itemize}
 }
-
 
 
 \section{Projects}

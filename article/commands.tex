@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Non-numbered sections %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+[block] %shape of the text (options are hang, block, display, runin, leftmargin, rightmargin, drop, wrap and frame)
+{\LARGE\bfseries} %formatting for the text
+{} %section label. Any text placed in these brackets will precede the section title.
+{0em} %space between the labe and the text
+{} %code that precedes the text
+[\vspace{-.5em}] %code after the text
+
+\titleformat{\subsection}
+[block]
+{\Large\bfseries} 
+{} %section label
+{0em}
+{}
+[\vspace{-.5em}]
+
+\titleformat{\subsubsection}
+[block]
+{\normalsize\bfseries}
+{} %section label
+{0em}
+{}
+[\vspace{-.5em}]
+
+%%%%%%%%%%%%%%%%%%%%%
+% Numbered sections %
+%%%%%%%%%%%%%%%%%%%%%
+%\titleformat{\section}
+%[block] 
+%{\LARGE\bfseries}
+%{\thesection}
+%{1em}
+%{}
+%[\vspace{-.5em}]
+
+%\titleformat{\subsection}[block]
+%{\Large\bfseries}
+%{\thesubsection}
+%{1em}
+%{}
+%[\vspace{-.5em}]
+
+%\titleformat{\subsubsection}[block]
+%{\normalsize\bfseries}
+%{\thesubsubsection} %section label
+%{1em}
+%{}
+%[\vspace{-.5em}]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End of section numbering commands %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\setlength{\parskip}{1em} %The spacing between paragraphs
+\setlist{nosep} %Single-spacing in lists
+
+% Define the \maketitle command that creates the title page and TOC
+\renewcommand{\maketitle}{
+\sffamily %Set san serif font for body text
+{\Huge\bfseries
+\thetitle}
+
+{\huge\theauthor}
+
+{\Large\thedate}
+\newpage
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{0} %Change 0 to 3 to number the TOC
+\tableofcontents
+\newpage
+\raggedright
+}

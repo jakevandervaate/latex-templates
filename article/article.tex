@@ -1,0 +1,85 @@
+\documentclass[english]{article}
+\usepackage{titling}
+\title{LaTeX Article Template} %Name the document between the brackets
+\author{Your Name} %Put your name between the brackets
+\date{\today} %Leave this alone and it will automatically use today's date. Change to a specific date if you don't want the date to update automatically.
+
+\input{packages}
+\input{commands}
+
+\hypersetup{
+colorlinks=true,
+linkcolor=black,
+filecolor=magenta,
+urlcolor=cyan,
+pdftitle={\thetitle}, %this displays in the web browser window
+pdfauthor={\theauthor},
+pdfsubject={This is a template for making modern-looking LaTex documents},
+pdfkeywords={LaTeX, template, article},
+}
+
+
+\begin{document}
+\maketitle
+%Begin Document
+
+\section{Introduction}
+
+This is a basic article document.
+This is my standard document that I like to use that doesn't look too \LaTeX-ey.
+The table of contents (TOC) for this document updates automatically as long as you use the proper section labels.
+
+\subsection{A subsection}
+
+This is a subsection.
+This template currently features sections, subsections, and subsubsections (H1, H2, and H3).
+
+\subsubsection{A subsubsection}
+
+This is a subsubsection; this is the third level heading.
+
+This is an example of a basic table.
+
+\begin{center}
+\begin{tabular}{lll}
+	\large{\textbf{A}} & \large{\textbf{Header}} & \large{\textbf{Row}} \\ \hline
+	A & normal & row \\
+	A & normal & row \\
+	A & normal & row \\
+\end{tabular}
+\end{center}
+
+
+\section{This is another section}
+
+I like to put each sentence of a document on its own line.
+I think it makes it easier to edit the document later.
+\LaTeX ignores single line breaks and puts the sentences together into paragraphs.
+
+Include an empty line between sentences to start a new paragraph.
+Here are some examples of other writing elements you might want to use in a document.
+
+This is a bulleted list.
+
+\begin{itemize}
+	\item This
+	\item is
+	\item a
+	\item bulleted
+	\item list
+\end{itemize}
+
+This is a numbered list.
+
+\begin{enumerate}
+	\item This
+	\item is
+	\item a
+	\item numbered
+	\item list
+\end{enumerate}
+
+This is \textbf{bold} and this is \textit{italic} text.
+This is a \href{https://www.gitlab.com/jakevandervaate/latex-templates}{hyperlink to the repository that has this template}.
+
+\end{document}

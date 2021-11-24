@@ -2,6 +2,27 @@
 
 Templates I've designed for LaTeX documents
 
+[TOC]
+
+
+## Article
+
+![Cover page of the article document](article/article-1.png)
+![Table of contents of the article document](article/article-2.png)
+![Content page for the article document](article/article-3.png)
+
+The article uses the three following files:
+
+* **article.tex**- This is the main document file where document content goes.
+  I've different lines of this to explain what they do and what editing them changes.
+* **commands.tex**- This file has my custom commands to style the headings, title, and lists.
+  This file has a commented out section (lines that start with `%`) that can number each section in the body of the document if you'd like them numbered.
+  Also change the line `\setcounter{secnumberdepth}{0}` to the section numbering depth you'd like in your document  table of contents (TOC). `0` means show no numbers at any level, where `3` would number the sections, subsections, and subsubsections in the TOC.
+* **packages.tex**- This file contains all the packages I use in this template.
+  More packages may need to be added to extend the functionality of this template if you'd like it to do more.
+  I did already include the table and graphics packages you need to include tables and images in the document.
+
+
 ## Resume
 
 ![Resume screenshot](resume/resume.png)
@@ -16,6 +37,7 @@ The resume is made up of the three following files:
 
 The main resume file needs the commands.tex and packages.tex file in order to work, so you should copy the entire folder when you want to make another copy of this resume (this is a good idea with any LaTeX document).
 
+
 ## pdf2png.sh
 
 This shell script is what I used to generate the document screenshots for this README.
@@ -27,5 +49,38 @@ These are the dependencies for this script:
 * imagemagick
 * optipng
 
+Follow these steps to use the script:
+
+1. Make the script executable with `chmod +x pdf2png.sh`
+2. `cd` into the input PDF's directory
+3. Use the command syntax `pdf2png.sh input.pdf first_page_to_convert last_page_to_convert`
+
+If you didn't add pdf2png.sh to your $PATH, make sure to include the path to the script in your command like `path/to/pdf2png.sh file.pdf 1 3`
+
+**Examples**
+
+Turn pages 1-3 from example.pdf into 3 separate PNG images
+
+`pdf2png.sh example.pdf 1 3`
+
+
+Convert the first page of example.pdf into a PNG image
+
+`pdf2png.sh example.pdf 1 1`
+
+or
+
+`pdf2png.sh example.pdf`
+
+
+Convert the third page of example.pdf into a PNG image
+
+`pdf2png.sh example.pdf 3 3`
+
+or
+
+`pdf2png.sh example.pdf 3`
+
+
 I've only tested this script on Linux; I can't speak to how well it will work on Mac.
-This script will only work on Windows through Windows Subsystem for Linux (WSL).
+This script should work on Windows through Windows Subsystem for Linux (WSL), but I haven't tested that either.
