@@ -2,7 +2,7 @@
 
 This is a resume that is easy for people to read and should work for many applicant tracking (ATS) systems.
 
-![resume.png](resume screenshot)
+![resume screenshot](resume.png)
 
 ## How to use this template
 
