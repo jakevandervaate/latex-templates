@@ -1,6 +1,6 @@
 # LaTeX resume template
 
-This is a resume that is easy for people to read and should work for many applicant tracking (ATS) systems.
+This is a resume that is easy for people to read and should work for many applicant tracking systems (ATS).
 
 ![resume screenshot](resume.png)
 
