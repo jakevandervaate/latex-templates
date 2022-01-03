@@ -2,9 +2,6 @@
 
 Templates I've designed for LaTeX documents
 
-[TOC]
-
-
 ## Article
 
 ![Cover page of the article document](article/article-1.png)
@@ -36,51 +33,3 @@ The resume is made up of the three following files:
 * **packages.tex**- This file contains all the packages I use in this template.
 
 The main resume file needs the commands.tex and packages.tex file in order to work, so you should copy the entire folder when you want to make another copy of this resume (this is a good idea with any LaTeX document).
-
-
-## pdf2png.sh
-
-This shell script is what I used to generate the document screenshots for this README.
-I included it for anyone who might be interested in doing the same.
-
-These are the dependencies for this script: 
-
-* pdftoppm
-* imagemagick
-* optipng
-
-Follow these steps to use the script:
-
-1. Make the script executable with `chmod +x pdf2png.sh`
-2. `cd` into the input PDF's directory
-3. Use the command syntax `pdf2png.sh input.pdf first_page_to_convert last_page_to_convert`
-
-If you didn't add pdf2png.sh to your $PATH, make sure to include the path to the script in your command like `path/to/pdf2png.sh file.pdf 1 3`
-
-**Examples**
-
-Turn pages 1-3 from example.pdf into 3 separate PNG images
-
-`pdf2png.sh example.pdf 1 3`
-
-
-Convert the first page of example.pdf into a PNG image
-
-`pdf2png.sh example.pdf 1 1`
-
-or
-
-`pdf2png.sh example.pdf`
-
-
-Convert the third page of example.pdf into a PNG image
-
-`pdf2png.sh example.pdf 3 3`
-
-or
-
-`pdf2png.sh example.pdf 3`
-
-
-I've only tested this script on Linux; I can't speak to how well it will work on Mac.
-This script should work on Windows through Windows Subsystem for Linux (WSL), but I haven't tested that either.
