@@ -11,20 +11,41 @@ Create your resume by filling in the information in the curly braces for each ar
 
 The sections of the document can be rearranged by changing the content in each of the `\section{}` commands.
 
+Begin by editing the text in the `\title{}` `author{}` braces.
+The completed author field will look like `\author{Firstname Lastname}`.
 
 ### Contact information
 
-Begin by editing the text in the `\title{}` `author{}` braces.
+The top bar of the resume allow you to select 3 of the following fields:
 
-The completed author field will look like `\author{Firstname Lastname}`.
+* Phone number
+* Email
+* LinkedIn URL
+* Website
+* Location (City, ST)
 
+Fill in the second set of braces for the lines that start with `\newcommand` to edit the top bar of the resume file.
 
-Next, fill in the second set of braces for the lines that start with `\necommand`.
+```
+		    Change this content
+                    vvvvvvvvvvvvvvvvvvvv
+\newcommand{\email}{your.email@email.com}
+\newcommand{\phone}{+1(111)111-1111}
+\newcommand{\linkedin}{your-linkedin-slug} %slug (the last part) for url
+\newcommand{\website}{yourwebsiteontheweb.com}
+\newcommand{\location}{City, ST}
+```
 
-The email field will look like `\newcommand{\email}{your.email@email.com}`
 
 The LinkedIn link just needs the slug to your LinkedIn profile.
 The slug is the last part of the URL to an individual's LinkedIn profile.
+
+```
+		This is the slug
+                vvvvvvvvvvvvvvvvv
+linkedin.com/in/firstnamelastname
+```
+
 Learn how to change your LinkedIn profile URL at [this link](https://www.linkedin.com/help/linkedin/answer/87/customizing-your-public-profile-url?lang=en).
 
 
@@ -83,7 +104,7 @@ Some ATS systems don't like tables; if you're worried about an ATS system ignori
 Use the `\tab` command to align the text nicely.
 
 
-## Compiling the resume
+## Compile the resume
 
 Compile this resume with the following command:
 

@@ -1,12 +1,12 @@
+%Set margins and spacing for unordered lists
 \setlist{nosep}
-
 \setlist[itemize]{
-leftmargin=9pt,
-rightmargin=9pt,
-itemsep=4pt
+	leftmargin=9pt,
+	rightmargin=9pt,
+	itemsep=4pt
 }
 
-
+%Format the section headings
 \titleformat{\section}
 {\vspace{-4mm}\raggedright\LARGE\mdseries}
 {}
@@ -17,36 +17,45 @@ itemsep=4pt
 %Entry for experience
 \newcommand{\entry}[5]{
 	\vspace{-2mm} %top spacing
-     \begin{tabular*}{1.00\textwidth}[t]{l@{\extracolsep{\fill}}r}
-	     \vspace{1mm} % middle spacing
-	     \large{\textbf{#1}} & \normalsize{#2} \\
-	     \textit{\small{#3}} & \textit{\small{#4}} \\
-     \end{tabular*}
-     \vspace{-2mm}
-     \begin{adjustwidth}{7pt}{7pt}
-     \small{#5}
-     \end{adjustwidth}
-     \vspace{4mm}
+	\begin{tabular*}{1.00\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\vspace{1mm} % middle spacing
+		\large{\textbf{#1}} & \normalsize{#2} \\
+		\textit{\small{#3}} & \textit{\small{#4}} \\
+	\end{tabular*}
+	\vspace{-2mm}
+	\begin{adjustwidth}{7pt}{7pt}
+	\small{#5}
+	\end{adjustwidth}
+	\vspace{4mm}
 }
+
+%Command for empty career or education descriptions
 \newcommand{\nothing}{\vspace{-6mm}}
 
+%Command for the objective statement paragraph
+\newcommand{\objective}[1]{
+	\begin{adjustwidth}{7pt}{7pt}
+	\small{#1}
+	\end{adjustwidth}
+	\vspace{4mm}
+}
 
 %Maketitle command that sets document header
 \renewcommand{\maketitle}{
-{\Huge\bfseries
-\theauthor}
-\vspace{3mm}
-\hrule
-\centering
-\ \small{\faIcon{phone} \phone}
-\hfill
-\small{\faIcon{envelope} \href{mailto://\email}{\email}}
-\hfill
-\small{\faIcon{linkedin} \href{https://www.linkedin.com/in/\linkedin/}{linkedin.com/in/\linkedin/}}\ \
-%\small{\faIcon{globe} \href{https://\website/}{\website}}
-\raggedright
-
-\NumTabs{10} %Allow use of the \tab command for alignment
+	{\Huge\bfseries
+	\theauthor}
+	\vspace{3mm}
+	\hrule
+	\centering
+	\ \small{\faIcon{phone} \phone}
+	\hfill
+	\small{\faIcon{envelope} \href{mailto://\email}{\email}}
+	\hfill
+	\small{\faIcon{linkedin} \href{https://www.linkedin.com/in/\linkedin/}{linkedin.com/in/\linkedin/}}\ \
+	%\small{\faIcon{map-marker-alt} {\location}}\ \
+	%\small{\faIcon{globe} \href{https://\website/}{\website}}\ \
+	\raggedright
+	\NumTabs{10} %Allow use of the \tab command for alignment
 }
 
 

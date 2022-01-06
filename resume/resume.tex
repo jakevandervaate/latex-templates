@@ -1,16 +1,18 @@
 \documentclass[english]{article}
 \usepackage{titling}
-\title{Resume}
-\author{Your Name}
-\date{\today}
+\author{Your Name} %Fill in your name here
+\title{Resume -- \theauthor} 
+\date{\today} %Automatically dates the document
 
-\input{packages}
+\input{packages} 
 \input{commands}
 
+%edit the commands file to select the 3 options you'd like in the top bar
 \newcommand{\email}{your.email@email.com}
 \newcommand{\phone}{+1(111)111-1111}
 \newcommand{\linkedin}{your-linkedin-slug} %slug (the last part) for url
 \newcommand{\website}{yourwebsiteontheweb.com}
+\newcommand{\location}{City, ST}
 
 \hypersetup{
 colorlinks=true, %"false" disables link colors
@@ -20,13 +22,23 @@ urlcolor=black, %color for hyperlinked urls
 pdftitle={\thetitle}, %Populates "title" metadata field
 pdfauthor={\theauthor}, %Populates "author" metadata field
 pdfsubject={Resume/CV for \theauthor}, %Populates "subject" metadata
-pdfkeywords={resume, cv}, %Populates PDF keyword metadata, separate with commas
+pdfkeywords={resume, cv}, %Populates PDF keyword metadata, change these for relevant keywords in job postings, separated with commas
 }
 
 
 \begin{document}
-\sffamily %Set san serif font for body text
+\sffamily %San serif font. Comment out for serif font
 \maketitle
+
+
+\section{Objective}
+
+\objective{
+This is a place for an objective statement.
+If you want an objective statement, you can add it here.
+If you don't want an objective statement, you can comment out or delete the relevant lines in the source file.
+Otherwise, put three to four nice sentences about yourself in this space.
+}
 
 
 \section{Education}
@@ -93,6 +105,5 @@ Maybe highlight some of the tools you used below.
 \textbf{Markup Languages} & Example, example, example, example \\
 \textbf{Graphic Design} & Example, example, example 
 \end{tabular}
-
 
 \end{document}
